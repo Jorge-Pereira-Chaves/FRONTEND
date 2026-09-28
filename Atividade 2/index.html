@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caixa Eletrônico - Interface Web</title>
+  <!-- Importação do arquivo de estilos CSS -->
+  <link rel="stylesheet" href="index.css">
+  <!-- Importação do arquivo de lógica JavaScript com carregamento diferido -->
+  <script src="index.js" defer></script>
+</head>
+<body>
+
+  <div class="atm-card">
+    <div class="header">
+      <h1>🏦 Caixa Eletrônico</h1>
+    </div>
+
+    <!-- DFN / Área de Dados do Titular -->
+    <div class="info-box">
+      <p><strong>Titular:</strong> <span id="titular">Maria Oliveira</span></p>
+      <p><strong>Agência:</strong> <span id="agencia">0001</span></p>
+      <p><strong>Conta:</strong> <span id="conta">12345-6</span></p>
+    </div>
+
+    <!-- Exibição do Saldo Formatado -->
+    <div class="balance-box">
+      <span>Saldo Disponível</span>
+      <h2 id="saldoDisplay">R$ 500,00</h2>
+    </div>
+
+    <!-- Entrada de Valores e Botões de Operação -->
+    <div class="form-group">
+      <label for="valorInput">Valor da Operação (R$)</label>
+      <input type="number" id="valorInput" placeholder="0.00" step="0.01" min="0.01">
+    </div>
+
+    <div class="actions">
+      <button id="btnDebito" class="btn-debit">Realizar Débito</button>
+      <button id="btnCredito" class="btn-credit">Realizar Crédito</button>
+    </div>
+
+    <!-- Feedback de Sucesso/Erro -->
+    <div id="mensagem" class="message"></div>
+  </div>
+
+</body>
+</html>
